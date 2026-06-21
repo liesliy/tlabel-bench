@@ -1,0 +1,9 @@
+{
+  "benchmark": "tlabel-bench",
+  "version": "1.0.0",
+  "sensor_type": "xense",
+  "sensor_adapter": "xense",
+  "generated_with": "tlabel>=0.4.2",
+  "data_source": "Placeholder — awaiting Xense data availability",
+  "annotations": []
+}

@@ -1,0 +1,73 @@
+{
+  "benchmark": "tlabel-bench",
+  "version": "1.0.0",
+  "sensor_type": "daimon_dma",
+  "sensor_adapter": "daimon_dma",
+  "generated_with": "tlabel>=0.4.2",
+  "data_source": "ObjTac + Daimon-Infinity samples",
+  "annotations": [
+    {
+      "object_id": "obj_001",
+      "material_label": "rigid",
+      "material_detail": "aluminum_block",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 28},
+        "press": {"start_frame": 29, "end_frame": 155},
+        "release": {"start_frame": 156, "end_frame": 182}
+      },
+      "quality_score": 0.90,
+      "quality_level": "excellent",
+      "features": {
+        "eccentricity": 0.88,
+        "skewness": -0.08,
+        "kurtosis": 2.76,
+        "contact_ratio": 0.76,
+        "slip_entropy": 0.18,
+        "pressure_variance": 0.012
+      }
+    },
+    {
+      "object_id": "obj_002",
+      "material_label": "soft",
+      "material_detail": "rubber_ball",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 25},
+        "press": {"start_frame": 26, "end_frame": 170},
+        "release": {"start_frame": 171, "end_frame": 195}
+      },
+      "quality_score": 0.86,
+      "quality_level": "excellent",
+      "features": {
+        "eccentricity": 0.73,
+        "skewness": 0.31,
+        "kurtosis": 3.48,
+        "contact_ratio": 0.63,
+        "slip_entropy": 0.38,
+        "pressure_variance": 0.025
+      }
+    },
+    {
+      "object_id": "obj_003",
+      "material_label": "deformable",
+      "material_detail": "sponge",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 40},
+        "press": {"start_frame": 41, "end_frame": 188},
+        "release": {"start_frame": 189, "end_frame": 210}
+      },
+      "quality_score": 0.77,
+      "quality_level": "good",
+      "features": {
+        "eccentricity": 0.64,
+        "skewness": 0.46,
+        "kurtosis": 3.98,
+        "contact_ratio": 0.51,
+        "slip_entropy": 0.59,
+        "pressure_variance": 0.039
+      }
+    }
+  ]
+}

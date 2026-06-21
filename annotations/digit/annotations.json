@@ -1,0 +1,73 @@
+{
+  "benchmark": "tlabel-bench",
+  "version": "1.0.0",
+  "sensor_type": "digit",
+  "sensor_adapter": "digit",
+  "generated_with": "tlabel>=0.4.2",
+  "data_source": "SSVTP",
+  "annotations": [
+    {
+      "object_id": "obj_001",
+      "material_label": "rigid",
+      "material_detail": "aluminum_block",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 35},
+        "press": {"start_frame": 36, "end_frame": 165},
+        "release": {"start_frame": 166, "end_frame": 198}
+      },
+      "quality_score": 0.85,
+      "quality_level": "excellent",
+      "features": {
+        "eccentricity": 0.82,
+        "skewness": -0.18,
+        "kurtosis": 2.91,
+        "contact_ratio": 0.68,
+        "slip_entropy": 0.25,
+        "pressure_variance": 0.019
+      }
+    },
+    {
+      "object_id": "obj_002",
+      "material_label": "soft",
+      "material_detail": "rubber_ball",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 31},
+        "press": {"start_frame": 32, "end_frame": 182},
+        "release": {"start_frame": 183, "end_frame": 210}
+      },
+      "quality_score": 0.81,
+      "quality_level": "excellent",
+      "features": {
+        "eccentricity": 0.69,
+        "skewness": 0.29,
+        "kurtosis": 3.35,
+        "contact_ratio": 0.57,
+        "slip_entropy": 0.41,
+        "pressure_variance": 0.031
+      }
+    },
+    {
+      "object_id": "obj_003",
+      "material_label": "deformable",
+      "material_detail": "sponge",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 48},
+        "press": {"start_frame": 49, "end_frame": 198},
+        "release": {"start_frame": 199, "end_frame": 225}
+      },
+      "quality_score": 0.74,
+      "quality_level": "good",
+      "features": {
+        "eccentricity": 0.59,
+        "skewness": 0.48,
+        "kurtosis": 4.08,
+        "contact_ratio": 0.44,
+        "slip_entropy": 0.63,
+        "pressure_variance": 0.045
+      }
+    }
+  ]
+}

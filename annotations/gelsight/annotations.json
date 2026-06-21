@@ -1,0 +1,73 @@
+{
+  "benchmark": "tlabel-bench",
+  "version": "1.0.0",
+  "sensor_type": "gelsight_mini",
+  "sensor_adapter": "gelsight_mini",
+  "generated_with": "tlabel>=0.4.2",
+  "data_source": "Touch and Go",
+  "annotations": [
+    {
+      "object_id": "obj_001",
+      "material_label": "rigid",
+      "material_detail": "aluminum_block",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 42},
+        "press": {"start_frame": 43, "end_frame": 178},
+        "release": {"start_frame": 179, "end_frame": 215}
+      },
+      "quality_score": 0.92,
+      "quality_level": "excellent",
+      "features": {
+        "eccentricity": 0.85,
+        "skewness": -0.12,
+        "kurtosis": 2.87,
+        "contact_ratio": 0.73,
+        "slip_entropy": 0.21,
+        "pressure_variance": 0.015
+      }
+    },
+    {
+      "object_id": "obj_002",
+      "material_label": "soft",
+      "material_detail": "rubber_ball",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 38},
+        "press": {"start_frame": 39, "end_frame": 195},
+        "release": {"start_frame": 196, "end_frame": 228}
+      },
+      "quality_score": 0.88,
+      "quality_level": "excellent",
+      "features": {
+        "eccentricity": 0.71,
+        "skewness": 0.34,
+        "kurtosis": 3.42,
+        "contact_ratio": 0.61,
+        "slip_entropy": 0.45,
+        "pressure_variance": 0.028
+      }
+    },
+    {
+      "object_id": "obj_003",
+      "material_label": "deformable",
+      "material_detail": "sponge",
+      "interaction_id": 1,
+      "episode": {
+        "contact": {"start_frame": 0, "end_frame": 55},
+        "press": {"start_frame": 56, "end_frame": 210},
+        "release": {"start_frame": 211, "end_frame": 240}
+      },
+      "quality_score": 0.79,
+      "quality_level": "good",
+      "features": {
+        "eccentricity": 0.62,
+        "skewness": 0.51,
+        "kurtosis": 4.15,
+        "contact_ratio": 0.48,
+        "slip_entropy": 0.67,
+        "pressure_variance": 0.042
+      }
+    }
+  ]
+}

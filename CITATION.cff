@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use TLabel-Bench in your research, please cite it as below."
+type: dataset
+title: "TLabel-Bench: The First Cross-Sensor Unified Tactile Annotation Benchmark"
+authors:
+  - family-names: "Wu"
+    given-names: "Sheng"
+    affiliation: "NiuXu Technology"
+  - family-names: "Luo"
+    given-names: "Xi"
+    affiliation: "NiuXu Technology"
+repository-code: "https://github.com/liesliy/tlabel-bench"
+url: "https://github.com/liesliy/tlabel-bench"
+related-identifiers:
+  - type: "software"
+    value: "https://github.com/liesliy/tlabel"
+    description: "TLabel — sensor-agnostic tactile annotation toolkit"
+keywords:
+  - "tactile sensing"
+  - "tactile annotation"
+  - "cross-sensor"
+  - "benchmark"
+  - "material recognition"
+  - "sensor-agnostic"
+  - "TLabel"
+license: CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-06-21"
