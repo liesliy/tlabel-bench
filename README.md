@@ -19,7 +19,7 @@ Every public tactile dataset today is **sensor-specific** — GelSight data only
 TLabel-Bench fills this gap. It is the first benchmark that provides:
 
 - **Cross-sensor annotations** for the same objects across GelSight Mini, DIGIT, DMA, and Xense
-- **Unified TLabel format** — switch sensors by switching adapters, labels stay identical
+- **Unified TLabel Schema V2** — switch sensors by switching adapters, labels stay identical
 - **Multi-level annotations** — material labels, episode segmentation (contact → press → release), and quality scores
 - **Three export formats** — HDF5, CSV, and JSON for maximum compatibility
 
@@ -49,7 +49,7 @@ tlabel-bench/
 ### 1. Install TLabel
 
 ```bash
-pip install tlabel>=0.4.2
+pip install tlabel>=0.17.0
 ```
 
 ### 2. Download raw data
@@ -74,16 +74,18 @@ python evaluation/material_classification.py
 
 ## 📊 Annotation Schema
 
-Each annotation file follows the TLabel standard schema:
+Each annotation file follows the TLabel benchmark schema, built on top of the 14-dim TLabel Schema V2:
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `sensor_type` | string | Sensor adapter name (e.g., "gelsight_mini") |
 | `object_id` | string | Unique object identifier |
 | `material_label` | string | Material category (rigid, soft, deformable) |
+| `material_detail` | string | Fine-grained material description |
+| `interaction_id` | integer | Interaction number for this object |
 | `episode` | object | Episode segmentation: contact, press, release |
 | `quality_score` | float | Data quality score (0.0–1.0) |
-| `timestamp` | float | Relative timestamp in seconds |
+| `quality_level` | string | Quality tier: excellent / good / acceptable / poor |
+| `features` | object | Pre-computed features from 14-dim Schema V2 |
 
 See [annotation_schema.md](docs/annotation_schema.md) for the full specification.
 

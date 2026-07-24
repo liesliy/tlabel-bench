@@ -11,7 +11,7 @@ Thank you for your interest in contributing! This guide covers how to add new se
 If you have access to a tactile sensor not yet covered (SynTouch, XELA, BioTac, etc.):
 
 1. Select objects from our standard object list (see `annotations/` for existing IDs)
-2. Annotate using TLabel ≥ 0.4.2
+2. Annotate using TLabel ≥ 0.17.0 (Schema V2, 14-dim)
 3. Export in JSON format following our [annotation schema](annotation_schema.md)
 4. Submit a PR with annotations in `annotations/<sensor_name>/`
 
@@ -37,7 +37,7 @@ New evaluation tasks are welcome:
 1. Follow the existing script structure in `evaluation/`
 2. Include a README within the script explaining the task and metrics
 3. Provide baseline results
-4. Ensure the script works with the standard annotation format
+4. Ensure the script works with the standard annotation format (14-dim Schema V2)
 
 ---
 
@@ -54,7 +54,7 @@ When contributing annotations based on existing datasets:
 
 ## PR Checklist
 
-- [ ] Annotations follow the [schema](annotation_schema.md)
+- [ ] Annotations follow the [schema](annotation_schema.md) (14-dim Schema V2)
 - [ ] Quality scores are computed (not manually assigned)
 - [ ] Episode segmentation is provided
 - [ ] Data source and license are documented

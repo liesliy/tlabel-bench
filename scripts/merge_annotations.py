@@ -24,7 +24,7 @@ try:
     HAS_TLABEL = True
 except ImportError:
     HAS_TLABEL = False
-    print("Warning: tlabel not installed. Run: pip install tlabel>=0.4.2")
+    print("Warning: tlabel not installed. Run: pip install tlabel>=0.17.0")
 
 
 ANNOTATIONS_DIR = Path(__file__).parent.parent / "annotations"
@@ -109,7 +109,7 @@ def main():
 
     sensors = ["gelsight", "digit", "dma", "xense"] if args.sensor == "all" else [args.sensor]
 
-    all_merged = {"benchmark": "tlabel-bench", "version": "1.0.0", "entries": []}
+    all_merged = {"benchmark": "tlabel-bench", "version": "1.0.0", "schema_version": "v2", "entries": []}
 
     for sensor in sensors:
         print(f"\n--- Processing {sensor} ---")

@@ -52,12 +52,12 @@ def load_features_and_labels(sensor: str):
         if not features:
             continue
         feature_vector = [
-            features.get("eccentricity", 0),
-            features.get("skewness", 0),
-            features.get("kurtosis", 0),
-            features.get("contact_ratio", 0),
-            features.get("slip_entropy", 0),
-            features.get("pressure_variance", 0),
+            features.get("contact", 0),
+            features.get("force_magnitude", 0),
+            features.get("slip_event", 0),
+            features.get("object_deformation", 0),
+            features.get("temperature", 0),
+            features.get("confidence", 0),
         ]
         X.append(feature_vector)
         y.append(ann["material_label"])
@@ -101,6 +101,9 @@ def main():
 
     print("TLabel-Bench: Material Classification Evaluation")
     print("=" * 55)
+    print("Features: contact, force_magnitude, slip_event, object_deformation, temperature, confidence")
+    print("Schema: TLabel 14-dim Schema V2 (tlabel>=0.17.0)")
+    print()
 
     for sensor in sensors:
         result = evaluate_sensor(sensor, args.kfold)

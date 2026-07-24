@@ -33,7 +33,7 @@ def load_sensor_data(sensor: str):
     """Load features and labels for a sensor."""
     ann_path = ANNOTATIONS_DIR / sensor / "annotations.json"
     if not ann_path.exists():
-        return None, None
+        return None, None, None
 
     with open(ann_path, "r") as f:
         data = json.load(f)
@@ -44,12 +44,12 @@ def load_sensor_data(sensor: str):
         if not features:
             continue
         feature_vector = [
-            features.get("eccentricity", 0),
-            features.get("skewness", 0),
-            features.get("kurtosis", 0),
-            features.get("contact_ratio", 0),
-            features.get("slip_entropy", 0),
-            features.get("pressure_variance", 0),
+            features.get("contact", 0),
+            features.get("force_magnitude", 0),
+            features.get("slip_event", 0),
+            features.get("object_deformation", 0),
+            features.get("temperature", 0),
+            features.get("confidence", 0),
         ]
         X.append(feature_vector)
         y.append(ann["material_label"])
@@ -121,6 +121,7 @@ def main():
         print()
 
     print("\nNote: Values show accuracy. Within-sensor = CV baseline, Cross-sensor = zero-shot transfer.")
+    print("Features: contact, force_magnitude, slip_event, object_deformation, temperature, confidence (14-dim Schema V2)")
 
 
 if __name__ == "__main__":
